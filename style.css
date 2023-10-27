@@ -1,0 +1,137 @@
+:root {
+--Tomato: hsl(4, 100%, 67%);
+
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+
+--font-size: 16px;
+
+--font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: var(--Charcoal-Grey);
+    max-height: 100vh;
+}
+
+#signUpContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 980px;
+    padding: 28px;
+    margin: 100px auto 32px auto;
+    box-sizing: border-box;
+    background: var(--White);
+    border-radius: 32px;
+    box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02),
+                25px 25px 20px hsla(0, 0% 0%, 0.05),
+                100px 100px 80px hsla(0, 0%, 0%, 0.05);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    padding: 82px 64px;
+    box-sizing: content-box;
+}
+#details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#details h1 {
+    font-size: 58px;
+    color: var(--Dark-Slate-Grey);
+}
+#details p {
+    width: 400px;
+    color: var(--Dark-Slate-Grey);
+}
+#listDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+#listDetails div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+form div label {
+    font-size: 12px;
+    color: var(--Dark-Slate-Grey);
+}
+#emailSignUp[type="email"] {
+    margin-top: 5px;
+    width: 325px;
+    padding: 18px 15px;
+    border-radius: 7px;
+    border: 1px solid var(--Grey);
+    outline: none;
+    transition: all 0.5s ease;
+}
+#emailSignUp[type="email"]:focus {
+    border: 1px solid var(--Dark-Slate-Grey);
+}
+#emailSignUp[type="email"]::placeholder {
+    color: var(--Grey);
+    font-size: var(--font-size);
+    transition: all 0.5s ease;
+}
+#emailSignUp[type="email"]:focus::-webkit-input-placeholder {
+    color: var(--Dark-Slate-Grey);
+}
+#submitButton {
+    margin-top: 5px;
+    width: 357px;
+    padding: 18px 15px;
+    border-radius: 7px;
+    border: none;
+    background: var(--Dark-Slate-Grey);
+    outline: none;
+    color: var(--White);
+    font-size: var(--font-size);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+#submitButton:hover {
+    animation: slide-in 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#image {
+    transition: all 1s ease;
+}
+#image:hover {
+    transform: scale(1.04);
+}
+
+@keyframes slide-in {
+    from {
+        background: var(--Dark-Slate-Grey);
+    }
+    to {
+        background: linear-gradient(to right, #FF5476, #FE5C57, #FF6740);
+    }
+}
