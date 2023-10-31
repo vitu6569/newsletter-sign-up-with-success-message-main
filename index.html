@@ -37,13 +37,13 @@
         <div><img src="assets/images/icon-list.svg" alt=""><span>And much more!</span></div>
       </div>
 
-      <form action="">
+      <form onsubmit="return false;">
         <div>
           <label for="emailSignUp"><strong>Email address</strong></label>
           <br>
-          <input type="email" name="emailSignUp" id="emailSignUp" placeholder="email@company.com">
+          <input type="email" name="emailSignUp" id="emailSignUp" placeholder="email@company.com" required>
         </div>
-        <button type="submit" id="submitButton" onclick="submitForm()"><strong>Subscribe to monthly newsletter</strong></button>
+        <button type="submit" value="enviar" id="submitButton" onclick="emailGetValue()"><strong>Subscribe to monthly newsletter</strong></button>
       </form>
 
     </section>
@@ -52,7 +52,24 @@
       <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
     </section>
   </main>
+
+  <main id="acknowledgments" class="hidden">
+    <section>
+      <div id="icon-success">
+        <img src="assets/images/icon-success.svg" alt="icon">
+      </div>
+
+      <div id="contentAcknowledgments">
+        <h1>Thanks for subscribing</h1>
+        <p>
+          A confirmation email has been sent to <strong id="emailUser">ash@loremcompany.com</strong>. Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button type="submit" onclick="closeMSG()">Dismiss message</button>
+    </section>
+  </main>
   
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
