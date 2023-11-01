@@ -14,7 +14,7 @@ if (emailValue) {
   } else {
     alert("Please enter your email address.");
   }
-  if (window.matchMedia("(max-width: 768px)").matches) {
+  if (window.matchMedia("(max-width: 940px)").matches) {
     document.body.style.background = "none";
   }
 }
