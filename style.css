@@ -121,7 +121,7 @@
         animation: slide-in 0.5s;
         animation-fill-mode: forwards;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 940px) {
     #image {
         width: 400px;
         content: url(assets/images/illustration-sign-up-desktop.svg);
