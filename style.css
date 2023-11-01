@@ -17,6 +17,7 @@
     }
     
     body {
+        transform: scale(1);
         font-size: var(--font-size);
         font-family: var(--font-family);
         background-color: var(--Charcoal-Grey);
@@ -120,9 +121,12 @@
         animation: slide-in 0.5s;
         animation-fill-mode: forwards;
     }
-    
+    @media (min-width: 768px) {
     #image {
+        width: 400px;
+        content: url(assets/images/illustration-sign-up-desktop.svg);
         transition: all 1s ease;
+    }
     }
     #image:hover {
         transform: scale(1.04);
@@ -181,7 +185,6 @@
         animation: slide-in 0.5s;
         animation-fill-mode: forwards;
     }
-
     @keyframes slide-in {
         from {
             background: var(--Dark-Slate-Grey);
@@ -190,3 +193,274 @@
             background: linear-gradient(to right, #FF5476, #FE5C57, #FF6740);
         }
     }
+    @media (max-width: 768px) {
+        body {
+            transform: scale(1);
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
+            background-color: var(--White);
+            background: url(assets/images/illustration-sign-up-mobile.svg) top/100% no-repeat;
+        }
+        #signUpContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 85% 0px 0px 0px;
+            box-sizing: border-box;
+            background:none;
+            border-radius: 32px;
+            max-width: 768px;
+            width: 100%;
+        }
+        #image {
+            content: none;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 32px;
+            padding: 0;
+            box-sizing: content-box;
+            transform: scale(1);
+        }
+        #details h1 {
+            font-size: 50px;
+            color: var(--Dark-Slate-Grey);
+        }
+        #details p {
+           max-width: 768px;
+            color: var(--Dark-Slate-Grey);
+        }
+        #listDetails {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            max-width: 768px;
+            width: 100%;
+        }
+        #emailSignUp[type="email"] {
+            margin-top: 5px;
+            max-width: 768px;
+            padding: 20px 20px;
+            border-radius: 7px;
+            border: 1px solid var(--Grey);
+            outline: none;
+    
+        }
+        #submitButton {
+            margin-top: 5px;
+            width: 100%;
+            padding: 20px 20px;
+            border-radius: 7px;
+            border: none;
+            background: var(--Dark-Slate-Grey);
+            outline: none;
+            color: var(--White);
+            font-size: var(--font-size);
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        #image:hover {
+            transform: scale(1.04);
+        }
+        
+        #acknowledgments {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 30% 0 0 ;
+            box-sizing: border-box;
+            background:none;
+            border-radius: 32px;
+            max-width: 768px;
+        }
+        #acknowledgments.hidden {
+            display: none;
+        }
+        #acknowledgments section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        #contentAcknowledgments {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 24px;
+        }
+        #contentAcknowledgments h1 {
+            font-size: 50px;
+            line-height: 1;
+            color: var(--Dark-Slate-Grey);
+        }
+        #contentAcknowledgments p, a {
+            text-decoration: none;
+            font-size: var(--font-size);
+            color: var(--Dark-Slate-Grey);
+        }
+        
+        #acknowledgments button {
+            margin-top: 100%;
+            width: 100%;
+            padding: 20px 20px;
+            border-radius: 7px;
+            border: none;
+            background: var(--Dark-Slate-Grey);
+            outline: none;
+            color: var(--White);
+            font-size: var(--font-size);
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        #acknowledgments button:hover {
+            animation: slide-in 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+    @media (max-width: 480px) {
+        body {
+            transform: scale(1);
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
+            background-color: var(--White);
+            background: url(assets/images/illustration-sign-up-mobile.svg) top/100% no-repeat;
+        }
+        #signUpContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 85% 5px 0px 0px;
+            box-sizing: border-box;
+            background:none;
+            border-radius: 32px;
+            max-width: 480px;
+            width: 100%;
+        }
+        #image {
+            content: none;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 32px;
+            padding: 0;
+            box-sizing: content-box;
+            transform: scale(1);
+        }
+        #details h1 {
+            font-size: 32px;
+            color: var(--Dark-Slate-Grey);
+        }
+        #details p {
+            width: 350px;
+            color: var(--Dark-Slate-Grey);
+        }
+        #listDetails {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            max-width: 300px;
+            width: 100%;
+        }
+        #emailSignUp[type="email"] {
+            margin-top: 5px;
+            width: 325px;
+            padding: 20px 20px;
+            border-radius: 7px;
+            border: 1px solid var(--Grey);
+            outline: none;
+    
+        }
+        #submitButton {
+            margin-top: 5px;
+            width: 100%;
+            padding: 20px 20px;
+            border-radius: 7px;
+            border: none;
+            background: var(--Dark-Slate-Grey);
+            outline: none;
+            color: var(--White);
+            font-size: var(--font-size);
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        #image:hover {
+            transform: scale(1.04);
+        }
+        
+        #acknowledgments {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 20% 0 0 ;
+            box-sizing: border-box;
+            background:none;
+            border-radius: 32px;
+            max-width: 768px;
+        }
+        #acknowledgments.hidden {
+            display: none;
+        }
+        #acknowledgments section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        #contentAcknowledgments {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 24px;
+        }
+        #contentAcknowledgments h1 {
+            font-size: 50px;
+            line-height: 1;
+            color: var(--Dark-Slate-Grey);
+        }
+        #contentAcknowledgments p, a {
+            text-decoration: none;
+            font-size: var(--font-size);
+            color: var(--Dark-Slate-Grey);
+        }
+        
+        #acknowledgments button {
+            margin-top: 100%;
+            width: 100%;
+            padding: 20px 20px;
+            border-radius: 7px;
+            border: none;
+            background: var(--Dark-Slate-Grey);
+            outline: none;
+            color: var(--White);
+            font-size: var(--font-size);
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        #acknowledgments button:hover {
+            animation: slide-in 0.5s;
+            animation-fill-mode: forwards;
+        }
+        }
