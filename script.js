@@ -1,6 +1,5 @@
 const main = document.getElementById("signUpContainer")
 const msg = document.getElementById("acknowledgments")
-const body = document.getElementById("body")
 
 function emailGetValue() {
 const email = document.getElementById("emailSignUp");
@@ -12,9 +11,11 @@ if (emailValue) {
     main.classList.add("hidden")
     emailUser.innerHTML = emailValue;
     msg.classList.remove("hidden");
-    body.style.background = "none"
   } else {
     alert("Please enter your email address.");
+  }
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    document.body.style.background = "none";
   }
 }
 
